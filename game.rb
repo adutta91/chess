@@ -20,9 +20,16 @@ class Game
       @board.piece_in_hand = @board[input]
       make_move(input)
     end
+    game_over();
   rescue BadInputError
     @board.drop_piece
     retry
+  end
+
+  def game_over
+    @board.switch_players!
+    puts "--------- GAME OVER ---------"
+    puts "#{@board.current_player} wins!"
   end
 
 
@@ -63,7 +70,6 @@ end
 
 if __FILE__ == $PROGRAM_NAME
   g = Game.new
-  # g.board.move([1, 0], [2, 0])
-  # dup_g = Game.new(g.board.dup)
+
   g.play
 end

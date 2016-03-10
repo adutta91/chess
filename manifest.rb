@@ -1,5 +1,5 @@
 # The Game class, which handles the flow of the game
-require_relative 'game.rb'
+require_relative 'chess_game.rb'
 # Custom Error classes used in the other classes
 require_relative './util/errors.rb'
 

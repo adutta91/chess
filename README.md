@@ -14,4 +14,6 @@ collaboration with [Sam](https://github.com/SamGerber), finalized solo
 
 # How to Run These Files
 The game requires Ruby to run ([Ruby Installation Tutorial](http://installrails.com/steps))
-Run bundle install in the terminal, and run the game with: `$ ruby chess_game.rb`
+
+- Download the files, run bundle install in the terminal, and run the game with:
+  `$ ruby chess_game.rb`

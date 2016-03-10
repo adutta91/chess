@@ -1,4 +1,4 @@
-require_relative 'piece'
+require_relative '../piece_super_classes/piece'
 
 class NullPiece < Piece
 

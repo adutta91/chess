@@ -1,4 +1,4 @@
-require_relative 'manifest'
+require_relative '../manifest'
 
 class Board
 
@@ -7,12 +7,12 @@ class Board
   attr_reader :grid, :size, :taken_pieces
   attr_accessor :piece_in_hand, :current_player
 
-  def initialize(dup = false)
+  def initialize(duplicate = false)
     @size = 8
     @grid = Array.new(size) { Array.new(size) { NULL_PIECE } }
     @taken_pieces = []
     @piece_in_hand = NULL_PIECE
-    populate unless dup
+    populate unless duplicate
     @current_player = :white
   end
 
@@ -157,8 +157,10 @@ class Board
   def king_in_check?(color)
     # Find enemy color
     enemy_color = color == :white ? :black : :white
+
     # Find your king's position
     king_position = find_king(color)
+
     # Increment over board
     grid.each do |row|
       row.each do |piece|
@@ -167,6 +169,7 @@ class Board
         return true if piece.color == enemy_color && piece.possible_moves.include?(king_position)
       end
     end
+
     # On end return false
     false
   end

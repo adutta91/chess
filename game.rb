@@ -1,5 +1,5 @@
-require_relative 'board.rb'
-require_relative 'display.rb'
+require_relative './util/board.rb'
+require_relative './util/display.rb'
 require_relative 'manifest.rb'
 
 class Game

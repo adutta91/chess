@@ -1,4 +1,4 @@
-require_relative "sliding_piece"
+require_relative "../piece_super_classes/sliding_piece"
 
 class Rook < SlidingPiece
 

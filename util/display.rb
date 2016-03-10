@@ -34,9 +34,6 @@ class Display
     mode = :default
     if [i, j] == @cursor
       bg = @board.piece_in_hand.is_a?(NullPiece) ? :yellow : :light_blue
-      # mode = :blink
-    # elsif @board.piece_in_hand.filter_moves.include?([i,j])
-    #   bg = :white
     elsif (i + j).even?
       bg = @board.piece_in_hand.filter_moves.include?([i,j]) ? :green : :white
     elsif (i + j).odd?
@@ -61,7 +58,7 @@ class Display
     footer << " #{@board.current_player} King is in check!!!" if @board.king_in_check?(@board.current_player)
     footer << " #{build_piece_bank(:white)[0]}"
     footer << " #{build_piece_bank(:white)[1]}"
-    # footer << @board.taken_pieces.join(" ")
+
     footer.join("\n")
   end
 

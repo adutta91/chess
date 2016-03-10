@@ -1,4 +1,4 @@
-require_relative 'stepping_piece'
+require_relative '../piece_super_classes/stepping_piece'
 
 class Knight < SteppingPiece
   def initialize(color, position, board)

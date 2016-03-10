@@ -1,4 +1,4 @@
-require_relative 'stepping_piece'
+require_relative '../piece_super_classes/stepping_piece'
 
 class King < SteppingPiece
   def initialize(color, position, board)
@@ -21,9 +21,10 @@ class King < SteppingPiece
   end
 
   def castles
-    return [] if has_moved
-    # return [] if @board.king_in_check?(color)
     castles = []
+
+    return castles if has_moved
+
     rook_positions = [[position[0], 0], [position[0], 7]]
     rook_positions.reject! { |position| @board[position].has_moved }
     rook_positions.each do |pos|

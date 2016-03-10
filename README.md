@@ -3,7 +3,7 @@
 A functional chess game written in Ruby to be run in the terminal. Initially a
 collaboration with [Sam](https://github.com/SamGerber), finalized solo
 
-## What's in there
+## Features
 * Highly modular - all pieces inherit from super classes that consolidate
   similar functionality, leading to very DRY code and construction
 * Utilizes the colorize gem to allow the user to use the arrow keys to navigate

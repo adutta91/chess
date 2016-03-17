@@ -12,8 +12,26 @@ collaboration with [Sam](https://github.com/SamGerber), finalized solo
   complex strategies such as castling
 * Abstracts and decomposes code to keep a lean code base
 
-# How to Run These Files
+## How to Run These Files
 The game requires Ruby to run ([Ruby Installation Tutorial](http://installrails.com/steps))
 
 - Download the files, run bundle install in the terminal, and run the game with:
   `$ ruby chess_game.rb`
+
+## Screenshots
+###Beginning
+![beginning]
+
+###Knight Moves
+![knight-moves]
+
+###King in check
+![check]
+
+###Game Over
+![game-over]
+
+[beginning]: ./images/beginning.png
+[knight-moves]: ./images/knight_moves.png
+[check]: ./images/check.png
+[game-over]: ./images/game_over.png
